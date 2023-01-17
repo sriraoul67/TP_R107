@@ -1,0 +1,14 @@
+def calculer_salaire(heures_travaillées, salaire_horaire):
+    salaire = min(heures_travaillées, 160) * salaire_horaire
+
+    if heures_travaillées > 160:
+        salaire += min(heures_travaillées, 200) - 160 * salaire_horaire * 0.25
+
+        if heures_travaillées > 200:
+            salaire += min(heures_travaillées, 200) * salaire_horaire * 0.50
+
+        return salaire
+
+n = int(input("Entrer le nombre d'heures travaillées"))
+salaire = calculer_salaire(n, 11.07)
+print(round(salaire,2))
