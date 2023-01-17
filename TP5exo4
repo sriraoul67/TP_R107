@@ -1,0 +1,13 @@
+monnaie = int(input("Quelle est la somme à décomposer"))
+nombre_100 = monnaie // 100
+remainder = monnaie % 100
+nombre_50 = monnaie // 50
+remainder = monnaie % 50
+nombre_10 = monnaie // 10
+remainder = monnaie % 10
+
+nombre_2 = monnaie // 2
+remainder = monnaie % 2
+nombre_1 = remainder
+
+print("{} euros, c'est donc {} billets de 100, {} de 50, {} de 10, {} pièces de 2 et {} pièces de 1".format(monnaie, nombre_100, nombre_50, nombre_10, nombre_2, nombre_1))
